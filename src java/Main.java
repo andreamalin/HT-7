@@ -11,6 +11,8 @@ public class Main{
 		Controlador control = new Controlador();
 		control.read(); //Se leen los txt
 		System.out.println(control.order()); //Se muestra el arbol ordenado
-		System.out.println(control.translate()); //Se muestra el array traducido
+
+		control.translate(); //Se traduce
+		System.out.println(control.getTranslate()); //Se muestra la oracion traducida
 	}
 }
