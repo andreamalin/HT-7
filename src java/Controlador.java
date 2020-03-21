@@ -76,14 +76,15 @@ public class Controlador{
 			}
 		}
 	}
-	//Se devuelve el texto traducido
-	public String getTranslate(){
+	//Se devuelve la oracion
+	public String getSentence(){
 		String sentence = "";
 		for (int i=0; i<text.size(); i++) {
 			sentence += text.get(i) + " ";
 		}
 		return sentence;
 	}
+
 
 
 

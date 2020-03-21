@@ -1,13 +1,15 @@
 /**********************************************************
 *Association.java           Fecha de creacion: 17 de marzo
-*                           Ultima fecha de modificacion: 17 de marzo
+*                           Ultima fecha de modificacion: 21 de marzo
 *                           
 *Clase encargada de los atributos de una asociacion
 *
 *@author Andrea Amaya #19357
 *Codigo adaptado de: Java Structures: Data Structures pagina 16 y pagina 257
 **********************************************************/
-public class Association<K, V> {
+import java.lang.*;
+
+public class Association<K extends Comparable<K>, V> {
     private K key;
     private V value;
 
@@ -43,9 +45,7 @@ public class Association<K, V> {
     @return Un entero que representa la comparacion 
     */
     public int compareTo(Association<K,V> that){
-        String k = key.toString();
-        String j = that.key.toString();
-        return k.compareTo(j);
+        return key.compareTo(that.key);
     }
 
 }
